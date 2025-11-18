@@ -475,7 +475,7 @@ export default function Home() {
             <p className="toast-title">
               Thank you for your feedback & information! We will keep you posted on future updates.
             </p>
-            <p className="toast-subtitle">Share with a friend!</p>
+            <p className="toast-subtitle">Share with a friend to move up the waitlist</p>
             <div className="share-grid">
               {[
                 { label: "Copy", icon: "🔗", action: "copy" },
