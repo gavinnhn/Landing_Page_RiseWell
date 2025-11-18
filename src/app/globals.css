@@ -249,6 +249,22 @@ body {
     url("/images/about-mission-v5.jpg");
 }
 
+.product-media-one {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url("/images/product-visualization.jpeg");
+}
+
+.product-media-two {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url("/images/bedside.jpeg");
+}
+
 .team-media-one {
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.1),

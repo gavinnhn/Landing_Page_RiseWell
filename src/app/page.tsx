@@ -90,24 +90,6 @@ const socialLinks = [
     ),
   },
   {
-    label: "GitHub",
-    href: "https://github.com",
-    icon: (
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1 5.45 5.45 0 0 0 16 2.48a13.38 13.38 0 0 0-7 0A5.45 5.45 0 0 0 5.09 1 5.07 5.07 0 0 0 5 4.77 5.44 5.44 0 0 0 3.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-      </svg>
-    ),
-  },
-  {
     label: "Discord",
     href: "https://discord.com",
     icon: (
@@ -181,12 +163,39 @@ export default function Home() {
     formRef.current?.reset();
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <div className="bg-dotted-grid flex min-h-screen flex-col text-black">
       <header className="glass-panel sticky top-0 z-20 flex items-center justify-between border-b border-white/30 px-6 py-4 text-black/80 shadow-sm">
         <Link href="/" className="text-2xl font-medium text-black playfair">
           RiseWell
         </Link>
+        <nav className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-6">
+          <button
+            onClick={() => scrollToSection("our-product")}
+            className="text-base font-medium text-black/80 transition-colors hover:text-black underline"
+          >
+            Our Product
+          </button>
+          <button
+            onClick={() => scrollToSection("about-us")}
+            className="text-base font-medium text-black/80 transition-colors hover:text-black underline"
+          >
+            About Us
+          </button>
+          <button
+            onClick={() => scrollToSection("meet-our-team")}
+            className="text-base font-medium text-black/80 transition-colors hover:text-black underline"
+          >
+            Meet Our Team
+          </button>
+        </nav>
         <Link
           href="#early-access-form"
           onClick={scrollToForm}
@@ -264,11 +273,51 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-t border-white/20 bg-white/95 px-6 py-20 text-black">
+        <section id="our-product" className="border-t border-white/20 bg-white/95 px-6 py-20 text-black">
           <div className="mx-auto max-w-[1200px] space-y-12">
             <div className="text-center">
               <h2 className="playfair mb-3 text-3xl font-semibold text-black md:text-4xl">
-                ABOUT US
+                Our Product
+              </h2>
+            </div>
+
+            <div className="grid items-center gap-10 md:grid-cols-2">
+              <div className="about-card">
+                <p className="text-sm font-semibold uppercase tracking-wide text-purple-600">
+                  More Than Just A Mat
+                </p>
+                <h3 className="mb-4 text-3xl font-semibold text-black">
+                  Data tracking integrated smart mat
+                </h3>
+                <p className="text-neutral-600">
+                  RiseMat captures weight & BMI changes, sleep duration, wake-up response time, and habit patterns. Users can access historical data, trends, insights, and streaks tied to personal goals and lifestyle changes.
+                </p>
+              </div>
+              <div className="about-media product-media-one" aria-hidden="true" />
+            </div>
+
+            <div className="grid items-center gap-10 md:grid-cols-2">
+              <div className="about-media product-media-two md:order-1 order-2" aria-hidden="true" />
+              <div className="about-card md:order-2 order-1">
+                <p className="text-sm font-semibold uppercase tracking-wide text-purple-600">
+                  Designed for personal improvement
+                </p>
+                <h3 className="mb-4 text-3xl font-semibold text-black">
+                  Building better wake-up behaviors
+                </h3>
+                <p className="text-neutral-600">
+                  By connecting the RiseMat to our app, personalized data analysis are provided to users to display their progress. Connectivity to other smart home devices allows for a truly unique, ultra effective wake-up experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about-us" className="border-t border-white/20 bg-white/95 px-6 py-20 text-black">
+          <div className="mx-auto max-w-[1200px] space-y-12">
+            <div className="text-center">
+              <h2 className="playfair mb-3 text-3xl font-semibold text-black md:text-4xl">
+                About Us
               </h2>
             </div>
 
@@ -298,13 +347,13 @@ export default function Home() {
                 </h3>
                 <p className="text-neutral-600">
                   By transforming the way users wake up, we enable them to start each day with purpose. Over time, these simple morning wins compound into stronger wellness, improved productivity, and a deeper sense of personal growth.
-                </p>
+          </p>
         </div>
             </div>
           </div>
         </section>
 
-        <section className="border-t border-white/20 bg-white px-6 py-20 text-black">
+        <section id="meet-our-team" className="border-t border-white/20 bg-white px-6 py-20 text-black">
           <div className="mx-auto max-w-[1200px] space-y-12">
             <div className="text-center">
               <h2 className="playfair mb-3 text-3xl font-semibold text-black md:text-4xl">
