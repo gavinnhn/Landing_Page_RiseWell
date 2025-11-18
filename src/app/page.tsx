@@ -330,7 +330,7 @@ export default function Home() {
                   Driving lasting wellness habits through active engagement
                 </h3>
                 <p className="text-neutral-600">
-                  RiseWell aims to become the indispensible platform for personal wellbeing by strategically delivering core features that drive sustained user interaction and deliver measurable value, maximizing market adoption.
+                  RiseWell aims to become the indispensable platform for personal wellbeing by strategically delivering core features that drive sustained user interaction and deliver measurable value, maximizing market adoption.
                 </p>
               </div>
               <div className="about-media about-media-one" aria-hidden="true" />
