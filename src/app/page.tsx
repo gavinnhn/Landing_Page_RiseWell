@@ -290,7 +290,7 @@ export default function Home() {
                   Data tracking integrated smart mat
                 </h3>
                 <p className="text-neutral-600">
-                  RiseMat captures weight & BMI changes, sleep duration, wake-up response time, and habit patterns. Users can access historical data, trends, insights, and streaks tied to personal goals and lifestyle changes.
+                  RiseMat captures weight fluctuations, sleep duration, wake-up response time, and habit patterns. Users can access historical data, trends, insights, and streaks related to personal goals and lifestyle changes.
                 </p>
               </div>
               <div className="about-media product-media-one" aria-hidden="true" />
